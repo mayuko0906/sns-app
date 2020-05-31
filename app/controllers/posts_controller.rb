@@ -5,10 +5,6 @@ class PostsController < ApplicationController
     @post.images.new
 
 
-    @images = Post.find(48).images
-    # @apost = Post.find(47)
-    # @image = @posts.images
-    @apost = @posts.find(48)
   end
 
   def timeline

@@ -4,11 +4,11 @@
       - if current_user.image.present?
         .user-icon
           = image_tag current_user.image.url
-        .user-name
-          #{current_user.name}
-        - if current_user.bio.present?
-          .user-bio
-            #{current_user.bio}
+      .user-name
+        #{current_user.name}
+      - if current_user.bio.present?
+        .user-bio
+          #{current_user.bio}
   .user-activity
     .tweets-num
       = link_to  user_path(current_user) do
