@@ -52,3 +52,5 @@
         -# = f.fields_for :images  do |i|
         -#   = i.file_field  :image_url ,multiple: true
         = f.submit 'つぶやく' , class: 'form-btn'
+        .form-image-link
+          = link_to "写真を投稿する" , new_post_path
