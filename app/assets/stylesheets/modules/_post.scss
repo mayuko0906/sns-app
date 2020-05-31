@@ -3,6 +3,7 @@
   font-family: 'M PLUS Rounded 1c', sans-serif;
 }
 
+
 .wrapper{
   height: calc(100vh - 60px);
   width: 1000px;
@@ -185,6 +186,16 @@
         }
       }
   }
+
+  .form-image{
+    width: 500px;
+    margin: 30px auto;
+    .form-post{
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+    }
+  }
 }
 .users{
   padding: 10px 15px 0 15px;
@@ -294,21 +305,12 @@
       }
     
     }
-    // a{
-    //   display: inline-block;
-    //   text-decoration: none;
-    //   font-size: 10px;
-    //   text-align: center;
-    //   line-height: 30px;
-    //   background-color: wheat;
-    //   width: 62px;
-    //   height: 60px;
-    // }
+
   }
   .user-timeline{
     width: 95%;
     padding-left: 10px;
-    margin: 20px auto;
+    margin: 0 auto;
     font-size: 20px;
     font-weight: bold;
     .all-posts{
@@ -322,14 +324,11 @@
   }
 
   .form{
-    // background-color: rebeccapurple;
 
   .form-post{
     display: flex;
     justify-content: center;
     flex-direction: column;
-
-
 
     .form-text{
       width: 90%;
@@ -337,11 +336,7 @@
       padding: 10px;
       height: calc( 1.8em * 4 );
       line-height: 1.8;
-
-
-  
     }
-
 
   }
 
@@ -352,7 +347,16 @@
   }
 
   }
-
+  .form-image-link{
+    margin-top: 5px;
+    text-align: center;
+    a{
+      display: inline-block;
+      text-decoration: none;
+      color: #b8860b;
+      text-align: center;
+    }
+  }
 
 }
 
