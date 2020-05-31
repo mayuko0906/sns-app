@@ -1,0 +1,10 @@
+投稿ページ
+.form
+  = form_for @post do |f|
+    .form-post
+      = f.text_area :post , class: 'form-text' , placeholder: 'いまどうしてる？',rows:"6"
+      = f.fields_for :images do |i|
+        = i.file_field  :image_url 
+      = f.submit 'つぶやく' , class: 'form-btn'
+
+  = render "side_bar"

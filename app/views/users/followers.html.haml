@@ -1,0 +1,18 @@
+.wrapper
+  .main-content
+    = render 'layouts/notifications'
+    .info-header
+      - if current_user.id == @user.id
+        .self-info
+          あなたのフォロワー
+      -else
+        .another-info
+          .another-info__header
+            #{@user.name}さんのフォロワー
+          = render partial: 'user-status', locals: { user: @user } 
+    - if @user.followers.empty?
+      %p
+        フォロワーがいません
+    .users
+      = render partial: 'user', collection: @user.followers
+  = render "posts/side_bar"

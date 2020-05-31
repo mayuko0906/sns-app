@@ -1,0 +1,18 @@
+.wrapper
+  .main-content
+    = render 'layouts/notifications'
+    .info-header
+      - if current_user.id == @user.id
+        .self-info
+          あなたがフォローしている人
+      -else
+        .another-info
+          .another-info__header
+            #{@user.name}さんがフォローしている人
+          = render partial: 'user-status', locals: { user: @user } 
+    - if @user.inverse_followers.empty?
+      %p
+        フォローしている人がいません
+    .users
+      = render partial: 'user', collection: @user.inverse_followers
+  = render "posts/side_bar"

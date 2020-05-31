@@ -1,0 +1,17 @@
+.wrapper
+  .main-content
+    = render 'layouts/notifications'
+    .info-header
+      - if current_user.id == @user.id
+        .self-info
+          あなたのお気に入り
+      - else
+        .another-info
+          .another-info__header
+            #{@user.name}さんのお気に入り
+          = render partial: 'user-status', locals: { user: @user } 
+    - if @user.favorites.empty?
+      お気に入りの投稿はまだありません
+    .posts
+      = render partial: 'posts/post', collection: @user.favorite_posts
+  = render "posts/side_bar"

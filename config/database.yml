@@ -47,8 +47,14 @@ test:
 #   production:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
+# production:
+#   <<: *default
+#   database: sns-app_production
+#   username: sns-app
+  # password: <%= ENV['SNS-APP_DATABASE_PASSWORD'] %>
+
 production:
   <<: *default
-  database: sns-app_production
-  username: sns-app
-  password: <%= ENV['SNS-APP_DATABASE_PASSWORD'] %>
+  adapter: postgresql
+  encoding: unicode
+  pool: 5

@@ -1,0 +1,16 @@
+.user
+  .user-icon
+    = link_to user_path(user) do
+      - if user.image.present?
+        = image_tag user.image.url
+      - else 
+        .no-image
+          no image
+  .user-name
+    = link_to user_path(user) do
+      #{user.name}
+  .follow-btn
+    - if user.followed_by? current_user
+      = link_to 'フォロー中' ,user_follows_path(user), method: :delete 
+    - else
+      = link_to 'フォローする',user_follows_path(user), method: :post 

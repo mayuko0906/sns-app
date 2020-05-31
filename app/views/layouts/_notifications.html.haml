@@ -1,0 +1,25 @@
+.notification
+  - flash.each do |key, value|
+    = content_tag :div, value, class: key
+
+-# .notification
+-#   - flash.each do |key, value| 
+-#     .alert.notice
+-#       = content_tag :div, class: key do
+-#         = value
+        -# %a{type:"button" ,class:"close"} 
+        -#   &times;
+-# <% flash.each do |message_type, message| %>
+ 
+-#   <% if flash[:photosuccess] %>
+-#     <div class="alert alert-success">
+-#       <%= message %>
+-#       <p>是非SNSでも当サイトをシェアしてください。</p>
+-#       <%= render 'layouts/snsbutton' %>
+-#     </div>
+-#   <% else %>
+-#     <div class="alert alert-<%= message_type %>">
+-#       <%= message %>
+-#     </div>
+-#   <% end %>
+-# <% end %>

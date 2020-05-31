@@ -1,0 +1,15 @@
+.wrapper
+  .main-content
+    = render 'layouts/notifications'
+    .info-header
+      - if current_user.id == @user.id
+        .self-info
+          あなたの投稿
+      -else
+        .another-info
+          .another-info__header
+            #{@user.name}さんの投稿
+          = render partial: 'user-status', locals: { user: @user } 
+    .posts
+      = render partial: 'posts/post', collection: @user.posts
+  = render "posts/side_bar"

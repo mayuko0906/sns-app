@@ -1,0 +1,22 @@
+.wrapper
+  .main-content
+    = render 'layouts/notifications'
+    .info-header
+      .self-info
+        フォローしている人のつぶやき
+    - if @posts.empty?
+      %p
+        表示するツイートがありません
+    -else
+    .posts
+      = render partial: 'post', collection: @posts
+
+      
+      -# - @posts.each do |post|
+      -#   .user
+      -#     .user-name
+      -#       = link_to post.user.name, user_path(post.user)
+      -#   .post-content
+      -#     = post.post
+
+  = render "side_bar"

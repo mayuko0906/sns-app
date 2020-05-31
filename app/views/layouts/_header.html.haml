@@ -1,0 +1,30 @@
+.header
+  .header__nav
+    .logo-img
+      = link_to  root_url  , class: "user"  do
+        タイトル
+    - if user_signed_in?
+      .search-box
+        = form_with url:"/posts/search" , local: true, method: :get, class: "search-form" do |form|
+          = form.text_field :keyword, placeholder: "投稿を検索", class: "search-input"
+          -# = form.submit "検索", class: "search-btn"
+      .search-box
+        = form_with url:"/users/search" , local: true, method: :get, class: "search-form" do |form|
+          = form.text_field :keyword, placeholder: "ユーザーを検索", class: "search-input"
+          -# = form.submit "検索", class: "search-btn"
+
+    %ul.user-nav
+      - if user_signed_in?
+        %li.dropdown-btn
+          = icon('fas' ,'cogs')
+          %ul.dropdown
+            %li
+              = link_to '設定',  edit_user_path(current_user)
+            %li
+              = link_to 'ログアウト', destroy_user_session_path, method: :delete 
+      - else
+        .first-view-menu
+          %li
+            = link_to '登録する', new_user_registration_path
+          %li 
+            = link_to 'ログイン', new_user_session_path
