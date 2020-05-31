@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
-  root to: 'posts#timeline'
+  root to: 'posts#index'
   resources :users, only: [:index, :show, :edit , :update] do
     resource :follows, only: [:create, :destroy]
     get :favorites, on: :member
