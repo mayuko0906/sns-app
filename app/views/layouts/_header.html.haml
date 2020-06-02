@@ -3,7 +3,7 @@
     .logo-img
       = link_to  posts_path  , class: "user"  do
         %sapn{style:"font-family: 'Kaushan Script', cursive"}
-          TweetApp
+          MuNi
     - if user_signed_in?
       .search-box
         = form_with url:"/posts/search" , local: true, method: :get, class: "search-form" do |form|

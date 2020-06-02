@@ -14,20 +14,22 @@
 .main-content{
   background-color: #faebd7;
   height: 100%;
-  width: calc(100% - 300px);
+  width: 70%;
   overflow: scroll;
 
   .info-header{
     background-color: #ffdab9;
     .self-info{
-      background-color:#eee8aa;
+      background-color:#bdb76b;
       height: 40px;
       line-height: 40px;
       padding-left: 10px;
+      color: white;
     }
     .another-info{
       &__header{
-        background-color: #eee8aa;
+        background-color: #bdb76b;
+        color: white;
         height: 40px;
         line-height: 40px;
         padding-left: 10px;
@@ -252,7 +254,7 @@
 .side-bar{
   background-color: #ffdab9;
   height: 100%;
-  width: 300px;
+  width: 30%;
 
   .user-info{
     width: 95%;
@@ -348,13 +350,16 @@
 
   }
   .form-image-link{
+    margin-left: 20px;
+
     margin-top: 5px;
-    text-align: center;
+    text-align: left;
     a{
       display: inline-block;
       text-decoration: none;
       color: #b8860b;
       text-align: center;
+      font-weight: bold;
     }
   }
 

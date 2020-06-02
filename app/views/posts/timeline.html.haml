@@ -3,10 +3,10 @@
     = render 'layouts/notifications'
     .info-header
       .self-info
-        フォローしている人のつぶやき
+        フォローしている人の投稿
     - if @posts.empty?
       %p
-        表示するツイートがありません
+        表示する投稿がありません
     -else
     .posts
       = render partial: 'post', collection: @posts

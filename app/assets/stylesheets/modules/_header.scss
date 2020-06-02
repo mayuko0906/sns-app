@@ -1,9 +1,11 @@
+#hamburger{
+  display: none;
+}
 .header{
   background-color: #fff5ee ;
   height: 60px;
   width: 100%;
   color: red;
-  // font-family: 'Kosugi Maru', sans-serif;
   &__nav{
     width: 1000px;
     height: 60px;
@@ -34,11 +36,12 @@
         // background-color: green;
         display: flex;
         margin: 5px;
-        height: 40px;
+        height: 30px;
 
         .search-input{
           width: 220px;
           text-align: center;
+          font-size: 15px;
 
         }
         .search-btn{
