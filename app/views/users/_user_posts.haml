@@ -23,7 +23,7 @@
           .destroy-btn
             = link_to "/posts/#{post.id}", method: :delete do
               削除
-              
+
         - if post.favorited_by? current_user
           = link_to  post_favorites_path(post), method: :delete do
             = icon 'fa', 'heart' ,class: 'fav-remove'

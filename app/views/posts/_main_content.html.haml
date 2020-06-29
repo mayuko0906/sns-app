@@ -4,35 +4,4 @@
     .self-info
       すべての投稿
   .posts
-    = render partial: 'post', collection:@posts
-
-    -# - @posts.each  do |post|
-    -#   .post
-    -#     %h4.user
-    -#       .user-name
-    -#         = link_to user_path(post.user) do
-    -#           = post.user.name
-    -#       .time
-    -#         = post.created_at.to_s(:datetime)
-    -#     .tweet-content
-    -#       %p
-    -#         = post.post
-    -#     - if user_signed_in? && current_user.id == post.user_id
-    -#       .destroy-btn
-    -#         = link_to "/posts/#{post.id}", method: :delete do
-    -#           削除
-              
-    -#     - if post.favorited_by? current_user
-    -#       = link_to  post_favorites_path(post), method: :delete do
-    -#         = icon 'fa', 'heart' ,class: 'fav-remove'
-    -#     - else
-    -#       = link_to  post_favorites_path(post), method: :post do
-    -#         = icon 'fa', 'heart' ,class: 'fav-add'
-    -#     -if post.favorites.count != 0
-    -#       = post.favorites.count
-
-    -#     - if current_user.id != post.user_id
-    -#       - if post.user.followed_by? current_user
-    -#         = link_to "フォロー中", user_follows_path(post.user), method: :delete
-    -#       - else
-    -#         = link_to "フォローする", user_follows_path(post.user), method: :post
+    = render partial: 'layouts/post', collection:@posts

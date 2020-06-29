@@ -1,6 +1,3 @@
-#hamburger{
-  display: none;
-}
 .header{
   background-color: #fff5ee ;
   height: 60px;
@@ -16,7 +13,6 @@
     .logo-img{
       width: 150px;
       height: 50px;
-      // background-color: #ffdab9;
       a{
         display: block;
         height: 50px;
@@ -28,12 +24,10 @@
         font-weight: bold;
         font-size: 35px;
         font-family: 'Kaushan Script', cursive;
-        
       }
     }
 
       .search-form{
-        // background-color: green;
         display: flex;
         margin: 5px;
         height: 30px;
@@ -53,75 +47,65 @@
           font-size: 18px;
           padding: 0 10px;
           width: 70px;
-
         }
-
-
-      
     }
+
     .user-nav{
       width:150px;
       height: 60px;
       text-align: right;
 
-
-
-  .dropdown-btn {
-    color: yellowgreen;
-    position:relative;
-    display:inline-block;
-    padding:10px;
-    cursor:pointer;
-    font-size: 20px;
-    line-height: 40px;
-    &::hover {
-      background:#ffa07a;
-    }
-  }
-  .dropdown {
-    z-index:1000;
-    background:#ffa07a;
-    position:absolute;
-    right:0;
-    top:60px;
-    width:120px;
-    padding:10px 20px;
-    display:none;
-    li {
-      display:block;
-      margin:10px 0;
-      text-align: center;
-      a {
-        font-size: 15px;
-        color:#fff;
-        text-decoration: none;
+    .dropdown-btn {
+      color: yellowgreen;
+      position:relative;
+      display:inline-block;
+      padding:10px;
+      cursor:pointer;
+      font-size: 20px;
+      line-height: 40px;
+      &::hover {
+        background:#ffa07a;
       }
     }
+    .dropdown {
+      z-index:1000;
+      background:#ffa07a;
+      position:absolute;
+      right:0;
+      top:60px;
+      width:120px;
+      padding:10px 20px;
+      display:none;
+      li {
+        display:block;
+        margin:10px 0;
+        text-align: center;
+        a {
+          font-size: 15px;
+          color:#fff;
+          text-decoration: none;
+        }
+      }
+    }
+    .open {
+      display:block;
+    }
+    .close {
+      display:block;
+    }
   }
-  .open {
-    display:block;
-  }
-  .close {
-    display:block;
+
+    .first-view-menu{
+      width: 150px;
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 0;
+      line-height: 40px;
+      a{
+        text-decoration: none;
+        font-size: 15px;
+        color: black;
+      }
+    }
   }
 }
-
-      .first-view-menu{
-        width: 150px;
-        display: flex;
-        justify-content: space-between;
-        padding: 10px 0;
-        line-height: 40px;
-        // background-color: lightcoral;
-        
-        a{
-          text-decoration: none;
-          font-size: 15px;
-          color: black;
-          // background-color: cadetblue;
-        }
-      
-      }
-    }
-    
-  }

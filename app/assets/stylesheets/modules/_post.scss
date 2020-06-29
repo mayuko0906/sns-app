@@ -3,7 +3,6 @@
   font-family: 'M PLUS Rounded 1c', sans-serif;
 }
 
-
 .wrapper{
   height: calc(100vh - 60px);
   width: 1000px;
@@ -115,7 +114,6 @@
       display: flex;
       .user-icon{
         width: 100px;
-        // background-color: seagreen;
 
         img{
           border-radius: 50%;
@@ -154,7 +152,6 @@
                   height: 50%;
                 }
               }
-
           }
         }
           .post-time{
@@ -172,7 +169,6 @@
             }
           }
           .destoroy-follow-wrapper{
-            // background-color: dodgerblue;
             font-size: 14px;
           }
         }
@@ -305,9 +301,7 @@
         line-height: 24px;
         color: #8b4513;
       }
-    
     }
-
   }
   .user-timeline{
     width: 95%;
@@ -322,7 +316,6 @@
       text-decoration: none;
       color: #b8860b;
     }
-
   }
 
   .form{
@@ -344,7 +337,6 @@
 
   .form-btn{
     width: 90%;
-    // background-color: gold;
     margin: 0 auto;
   }
 
@@ -365,24 +357,23 @@
 
 }
 
-
-#popup-background{
-  position:fixed;     /* 位置の固定 */
-  top: 0;             /* 表示位置 */
-  left: 0;            /* 表示位置 */
-  height: 100%;       /* 画面全体に表示 */
-  width: 100%;        /* 画面全体に表示 */
-  background:red;    /* 背景色 */
-  opacity: 0.60;      /* 透明度 */
-  margin: 0;          /* 余白の削除 */
-  padding: 0;         /* 余白の削除 */
-  z-index:1000;       /* 要素のz座標 */
-}
-#popup-item{
-  position:fixed;     /* 位置の固定 */
-  top: 50%;           /* 表示位置(真ん中に表示) */
-  left: 50%;          /* 表示位置(真ん中に表示) */
-  margin: 0;          /* 余白の削除 */
-  padding: 0;         /* 余白の削除 */
-  z-index:1001;       /* 要素のz座標 */
-}
+// #popup-background{
+//   position:fixed;     /* 位置の固定 */
+//   top: 0;             /* 表示位置 */
+//   left: 0;            /* 表示位置 */
+//   height: 100%;       /* 画面全体に表示 */
+//   width: 100%;        /* 画面全体に表示 */
+//   background:red;    /* 背景色 */
+//   opacity: 0.60;      /* 透明度 */
+//   margin: 0;          /* 余白の削除 */
+//   padding: 0;         /* 余白の削除 */
+//   z-index:1000;       /* 要素のz座標 */
+// }
+// #popup-item{
+//   position:fixed;     /* 位置の固定 */
+//   top: 50%;           /* 表示位置(真ん中に表示) */
+//   left: 50%;          /* 表示位置(真ん中に表示) */
+//   margin: 0;          /* 余白の削除 */
+//   padding: 0;         /* 余白の削除 */
+//   z-index:1001;       /* 要素のz座標 */
+// }

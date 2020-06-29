@@ -6,6 +6,7 @@
       - else
         .no-image
           no image
+
   .content
     .content-top
       .user-name
@@ -20,6 +21,7 @@
                 = image_tag image.image_url.url ,class:'popup-image'
       .post-time
         = post.created_at.to_s(:datetime)
+
     .content-bottom
       .favorite-wrapper
         .favorite-btn
@@ -44,6 +46,3 @@
               = link_to "フォロー中", user_follows_path(post.user), method: :delete
             - else
               = link_to "フォローする", user_follows_path(post.user), method: :post
-
--# .div#popup-background
--# img#popup-item
