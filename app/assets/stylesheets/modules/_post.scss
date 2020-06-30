@@ -163,7 +163,9 @@
           display: flex;
           justify-content: space-between;
           .favorite-wrapper{
-            display: flex;
+            .favorite-btn{
+              display: flex;
+            }
             .favorite-count{
               margin-left: 5px;
             }

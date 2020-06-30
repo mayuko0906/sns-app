@@ -1,0 +1,11 @@
+.favorite-btn
+  - if post.favorited_by? current_user
+    = link_to  post_favorites_path(post), method: :delete , remote: true do
+      = icon 'fa', 'heart' ,class: 'fav-remove'
+  - else
+    = link_to  post_favorites_path(post), method: :post , remote: true do
+      = icon 'fa', 'heart' ,class: 'fav-add'
+
+  -if post.favorites.count != 0
+    .favorite-count
+      = post.favorites.count
