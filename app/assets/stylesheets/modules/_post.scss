@@ -267,6 +267,19 @@
       border: 1px solid #8b4513;
       }
     }
+
+    .no-image{
+      width: 110px;
+      height: 110px;
+      background-color: floralwhite;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 110px;
+      font-size: 20px;
+      color: darkgray;
+      border: 1px solid #8b4513;
+    }
+
       a{
         color: #b8860b;
         text-decoration: none;
@@ -302,6 +315,7 @@
         text-align: center;
         line-height: 24px;
         color: #8b4513;
+        // display: flex;
       }
     }
   }
@@ -321,6 +335,7 @@
   }
 
   .form{
+    // background-color: dodgerblue;
 
   .form-post{
     display: flex;
@@ -329,34 +344,87 @@
 
     .form-text{
       width: 90%;
-      margin: 20px auto;
+      margin: 15px auto;
       padding: 10px;
-      height: calc( 1.8em * 4 );
-      line-height: 1.8;
+      // height: calc( 1.8em * 4 );
+      // line-height: 1.8;
     }
+  
 
+  #image-box{
+    // background-color: red;
+    margin: 0 15px;
+    height: 150px;
+    // position: relative;
+
+    #previews{
+      // background-color: lightblue;
+      display: flex;
+      justify-content: center;
+    }
+      .js-file_preview{
+        // background-color: pink;
+        position: relative;
+        .js-remove{
+          display: block;
+          cursor: pointer;
+          background-color: rgba(105,105,105,0.8);
+          color: white;
+          position: absolute;
+          top: 5px;
+          left: 5px;
+          width: 20px;
+          text-align: center;
+          font-size: 15px;
+          
+        }
+        .js-file_group{
+          cursor: pointer;
+          background-color: dimgray;
+          color: white;
+          // position: absolute;
+          // top: 5px;
+          // right: 5px;
+          p{
+            color: white;
+            text-align: center;
+            font-size: 15px;
+          }
+        }
+      }
+      .js-file_group{
+        label{
+          color: #8b4513;
+          background-color: lightsalmon;
+          padding: 5px;
+          display: block;
+          .no-disply{
+            display: none;
+          }
+        }
+      }
+      .btm-wrapper{
+        // background-color: dodgerblue;
+        width: 250px;
+        display: flex;
+        justify-content: space-around;
+        // position: absolute;
+        // bottom: 10px;
+
+        .form-btn{
+          background-color: lightsalmon;
+          color: #8b4513;
+          border: none;
+          padding: 5px;
+        }
+
+      }
+    
   }
-
-  .form-btn{
-    width: 90%;
-    margin: 0 auto;
-  }
-
-  }
-  .form-image-link{
-    margin-left: 20px;
-
-    margin-top: 5px;
-    text-align: left;
-    a{
-      display: inline-block;
-      text-decoration: none;
-      color: #b8860b;
-      text-align: center;
-      font-weight: bold;
+    .form-btn{
     }
   }
-
+  }
 }
 
 // #popup-background{
@@ -379,3 +447,7 @@
 //   padding: 0;         /* 余白の削除 */
 //   z-index:1001;       /* 要素のz座標 */
 // }
+
+.no-disply{
+  display: none;
+}

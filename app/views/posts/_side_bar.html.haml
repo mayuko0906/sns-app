@@ -4,11 +4,16 @@
       - if current_user.image.present?
         .user-icon
           = image_tag current_user.image.url
+      - else
+        .no-image
+          no image
+
       .user-name
         #{current_user.name}
       - if current_user.bio.present?
         .user-bio
           #{current_user.bio}
+
   .user-activity
     .tweets-num
       = link_to  user_path(current_user) do
@@ -48,9 +53,22 @@
   .form
     = form_for @post do |f|
       .form-post
-        = f.text_area :post , class: 'form-text' , placeholder: 'いまどうしてる？',rows:"6"
-        -# = f.fields_for :images  do |i|
-        -#   = i.file_field  :image_url ,multiple: true
-        = f.submit 'つぶやく' , class: 'form-btn'
-        .form-image-link
-          = link_to "写真を投稿する" , new_post_path
+        = f.text_area :post , class: 'form-text' , placeholder: 'いまどうしてる？',rows:"4"
+        #image-box
+          -# #previews
+          -# = f.fields_for :images  do |i|
+          -#   .js-file_group{"data-index" => "#{i.index}"}
+          -#     %label
+          -#       %i.far.fa-image.image-icon.js-file
+          -#       = i.file_field  :image_url , class: 'js-file no-disply'
+          .btm-wrapper
+            #image-form
+              = f.fields_for :images  do |i|
+                .js-file_group{"data-index" => "#{i.index}"}
+                  %label
+                    %i.far.fa-image.image-icon.js-file
+                    = i.file_field  :image_url , class: 'js-file no-disply'
+            = f.submit 'つぶやく' , class: 'form-btn'
+          #previews
+        -# .form-image-link
+        -#   = link_to "写真を投稿する" , new_post_path

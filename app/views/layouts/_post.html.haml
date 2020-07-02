@@ -15,8 +15,8 @@
       .post-content
         = post.post
         .post-content__image
-          - post.images.each do |image|
-            -if image.image_url.present?
+          -if post.images.present?
+            - post.images.each do |image|
               = link_to image.image_url.url ,'data-lightbox':image ,:rel => "lightbox" do
                 = image_tag image.image_url.url ,class:'popup-image'
       .post-time
@@ -25,26 +25,17 @@
     .content-bottom
       .favorite-wrapper{:id => "favorites_buttons_#{post.id}"}
         = render partial: 'layouts/favorite', locals: { post: post }
-      -# .favorite-wrapper
-      -#   .favorite-btn
-      -#   - if post.favorited_by? current_user
-      -#     = link_to  post_favorites_path(post), method: :delete do
-      -#       = icon 'fa', 'heart' ,class: 'fav-remove'
-      -#   - else
-      -#     = link_to  post_favorites_path(post), method: :post do
-      -#       = icon 'fa', 'heart' ,class: 'fav-add'
-
-      -#   -if post.favorites.count != 0
-      -#     .favorite-count
-      -#     = post.favorites.count
 
       .destoroy-follow-wrapper
         - if user_signed_in? && current_user.id == post.user_id
           .destroy-btn
             = link_to "削除" ,"/posts/#{post.id}", method: :delete 
         - else
-          .follow-btn
-            - if post.user.followed_by? current_user
-              = link_to "フォロー中", user_follows_path(post.user), method: :delete
-            - else
-              = link_to "フォローする", user_follows_path(post.user), method: :post
+          .follow-btn{:class => "follows_buttons_#{post.user.id}"}
+            = render partial: 'layouts/follow', locals: { user: post.user }
+
+          -# .follow-btn
+          -#   - if post.user.followed_by? current_user
+          -#     = link_to "フォロー中", user_follows_path(post.user), method: :delete
+          -#   - else
+          -#     = link_to "フォローする", user_follows_path(post.user), method: :post
