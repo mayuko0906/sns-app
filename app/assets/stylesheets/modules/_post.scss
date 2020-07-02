@@ -75,7 +75,6 @@
             bottom: 10px;
             display: flex;
             width: 100%;
-            // margin: 20px auto;
             font-size: 14px;
             justify-content: space-around;
             > div{
@@ -83,7 +82,6 @@
               width: 20%;
               height: 50px;
               border-radius: 10px;
-              // margin: 5px auto;
               >a{
                 text-decoration: none;
                 font-weight: bold;
@@ -96,15 +94,15 @@
         }
       }
     }
-
   }
+
   .index-info{
     height: 40px;
     line-height: 40px;
     background-color: #ffdead;
     padding-left: 10px;
-
   }
+
   .posts{
     padding: 10px 15px 0 15px;
     .post{
@@ -135,56 +133,55 @@
       }
       .content{
         width: 100%;
+      }
+      .user-name{
+        font-weight: bold;
+      }
+      .post-content{
+        padding: 0 10px;
+        font-size: 18px;
 
-        }
-          .user-name{
-            font-weight: bold;
-          }
-          .post-content{
-            padding: 0 10px;
-            font-size: 18px;
-
-            &__image{
-              a{
-                img{
-                  border-radius: 5px;
-                  width: 50%;
-                  height: 50%;
-                }
-              }
-          }
-        }
-          .post-time{
-            font-size: 15px;
-            color: darkgray;
-            text-align: right;
-          }
-        .content-bottom{
-          display: flex;
-          justify-content: space-between;
-          .favorite-wrapper{
-            .favorite-btn{
-              display: flex;
+        &__image{
+          a{
+            img{
+              border-radius: 5px;
+              width: 50%;
+              height: 50%;
             }
-            .favorite-count{
-              margin-left: 5px;
-            }
-          }
-          .destoroy-follow-wrapper{
-            font-size: 14px;
           }
         }
       }
-      a{
-        text-decoration: none;
-        color: black;
-        .fav-remove{
-          color: #f08080;
+      .post-time{
+        font-size: 15px;
+        color: darkgray;
+        text-align: right;
+      }
+      .content-bottom{
+        display: flex;
+        justify-content: space-between;
+        .favorite-wrapper{
+          .favorite-btn{
+            display: flex;
+          }
+          .favorite-count{
+            margin-left: 5px;
+          }
         }
-        .fav-add{
-          color: lightgray;
+        .destoroy-follow-wrapper{
+          font-size: 14px;
         }
       }
+    }
+    a{
+      text-decoration: none;
+      color: black;
+      .fav-remove{
+        color: #f08080;
+      }
+      .fav-add{
+        color: lightgray;
+      }
+    }
   }
 
   .form-image{
@@ -197,55 +194,55 @@
     }
   }
 }
+
 .users{
   padding: 10px 15px 0 15px;
 
-.user{
-  background-color: lightgreen;
-  padding: 10px;
-  margin-bottom: 10px;
-  background-color: #fffff0;
-  display: flex;
-  position: relative;
+  .user{
+    background-color: lightgreen;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #fffff0;
+    display: flex;
+    position: relative;
 
-  .user-icon{
-    width: 100px;
-    img{
-      border-radius: 50%;
-      width: 70px;
-      height: 70px;
-      border: 1px solid #8b4513;
+    .user-icon{
+      width: 100px;
+      img{
+        border-radius: 50%;
+        width: 70px;
+        height: 70px;
+        border: 1px solid #8b4513;
+      }
+      .no-image{
+        width: 70px;
+        height: 70px;
+        background-color: floralwhite;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 70px;
+        font-size: 12px;
+        color: darkgray;
+        border: 1px solid #8b4513;
+      }
     }
-    .no-image{
-      width: 70px;
-      height: 70px;
-      background-color: floralwhite;
-      border-radius: 50%;
-      text-align: center;
-      line-height: 70px;
-      font-size: 12px;
-      color: darkgray;
-      border: 1px solid #8b4513;
+    .user-name{
+      font-size: 30px;
+      height: 80px;
+      line-height: 80px;
+      font-weight: bold;
+    }
+    .follow-btn{
+      position: absolute;
+      right: 20px;
+      top: 40px;
+      font-size: 15px;
+    }
+    a{
+      text-decoration: none;
+      color: black;
     }
   }
-  .user-name{
-    font-size: 30px;
-    height: 80px;
-    line-height: 80px;
-    font-weight: bold;
-  }
-
-  .follow-btn{
-    position: absolute;
-    right: 20px;
-    top: 40px;
-    font-size: 15px;
-  }
-  a{
-    text-decoration: none;
-    color: black;
-  }
-}
 }
 
 
@@ -302,7 +299,6 @@
     font-size: 14px;
     display: flex;
     flex-wrap: wrap;
-    // justify-content: space-between;
     > div{
       background-color: lightsalmon;
       width: 40%;
@@ -315,7 +311,6 @@
         text-align: center;
         line-height: 24px;
         color: #8b4513;
-        // display: flex;
       }
     }
   }
@@ -335,95 +330,89 @@
   }
 
   .form{
-    // background-color: dodgerblue;
 
-  .form-post{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-
-    .form-text{
-      width: 90%;
-      margin: 15px auto;
-      padding: 10px;
-      // height: calc( 1.8em * 4 );
-      // line-height: 1.8;
-    }
-  
-
-  #image-box{
-    // background-color: red;
-    margin: 0 15px;
-    height: 150px;
-    // position: relative;
-
-    #previews{
-      // background-color: lightblue;
+    .form-post{
       display: flex;
       justify-content: center;
-    }
-      .js-file_preview{
-        // background-color: pink;
-        position: relative;
-        .js-remove{
-          display: block;
-          cursor: pointer;
-          background-color: rgba(105,105,105,0.8);
-          color: white;
-          position: absolute;
-          top: 5px;
-          left: 5px;
-          width: 20px;
-          text-align: center;
-          font-size: 15px;
-          
+      flex-direction: column;
+
+      .form-text{
+        width: 90%;
+        margin: 15px auto;
+        padding: 10px;
+        height: calc( 1.8em * 3 );
+        line-height: 1.8;
+        resize: none;
+      }
+
+      #image-box{
+        margin: 0 15px;
+        height: 120px;
+
+        #previews{
+          display: flex;
+          justify-content: center;
         }
-        .js-file_group{
-          cursor: pointer;
-          background-color: dimgray;
-          color: white;
-          // position: absolute;
-          // top: 5px;
-          // right: 5px;
-          p{
+
+        .js-file_preview{
+          position: relative;
+          padding: 2px;
+
+          .js-remove{
+            display: block;
+            cursor: pointer;
+            background-color: rgba(105,105,105,0.8);
             color: white;
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            width: 20px;
             text-align: center;
             font-size: 15px;
+            border-radius: 10px;
+          }
+
+          .js-file_group{
+            cursor: pointer;
+            color: white;
+            p{
+              color: #8b4513;
+              text-align: center;
+              font-size: 15px;
+            }
+          }
+        }
+        .js-file_group{
+          label{
+            color: #8b4513;
+            background-color: lightsalmon;
+            padding: 5px 10px;
+            display: block;
+            border-radius: 10px;
+            font-size: 15px;
+            cursor: pointer;
+            .no-disply{
+              display: none;
+            }
+          }
+        }
+        .btm-wrapper{
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 5px;
+
+          .form-btn{
+            background-color: lightsalmon;
+            color: #8b4513;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 10px;
+            font-size: 15px;
+            cursor: pointer;
           }
         }
       }
-      .js-file_group{
-        label{
-          color: #8b4513;
-          background-color: lightsalmon;
-          padding: 5px;
-          display: block;
-          .no-disply{
-            display: none;
-          }
-        }
-      }
-      .btm-wrapper{
-        // background-color: dodgerblue;
-        width: 250px;
-        display: flex;
-        justify-content: space-around;
-        // position: absolute;
-        // bottom: 10px;
-
-        .form-btn{
-          background-color: lightsalmon;
-          color: #8b4513;
-          border: none;
-          padding: 5px;
-        }
-
-      }
-    
-  }
-    .form-btn{
     }
-  }
   }
 }
 

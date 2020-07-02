@@ -4,11 +4,12 @@
     .info-header
       .self-info
         フォローしている人の投稿
+
     - if @posts.empty?
       %p
         表示する投稿がありません
     -else
-    .posts
-      = render partial: 'layouts/post', collection: @posts
+      .posts
+        = render partial: 'layouts/post', collection: @posts
 
   = render "side_bar"

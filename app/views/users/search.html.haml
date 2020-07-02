@@ -4,10 +4,12 @@
     .info-header
       .self-info
         検索結果
+
     - if @users.empty?
       %p
         一致するユーザーはいません
     - else
       .users
         = render partial: 'user', collection: @users
+
   = render "posts/side_bar"

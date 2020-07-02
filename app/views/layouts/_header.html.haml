@@ -6,11 +6,10 @@
           MuNi
     - if user_signed_in?
       .search-box
-        = form_with url:"/posts/search" , local: true, method: :get, class: "search-form" do |form|
+        = form_with url:"/posts/search" , local: true, method: :get, class: "search-form search-post" do |form|
           = form.text_field :keyword, placeholder: "投稿を検索", class: "search-input"
           -# = form.submit "検索", class: "search-btn"
-      .search-box
-        = form_with url:"/users/search" , local: true, method: :get, class: "search-form" do |form|
+        = form_with url:"/users/search" , local: true, method: :get, class: "search-form user" do |form|
           = form.text_field :keyword, placeholder: "ユーザーを検索", class: "search-input"
           -# = form.submit "検索", class: "search-btn"
 

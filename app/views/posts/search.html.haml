@@ -4,12 +4,14 @@
     .info-header
       .self-info
         検索結果
+
     - if @posts.empty?
       %p
         一致する投稿がありません
     -else
       .posts
         = render partial: 'layouts/post', collection: @posts
+
   = render "side_bar"
 
 

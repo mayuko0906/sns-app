@@ -10,9 +10,12 @@
           .another-info__header
             #{@user.name}さんのフォロワー
           = render partial: 'user-status', locals: { user: @user } 
+
     - if @user.followers.empty?
       %p
         フォロワーがいません
-    .users
-      = render partial: 'user', collection: @user.followers
+    - else
+      .users
+        = render partial: 'user', collection: @user.followers
+
   = render "posts/side_bar"

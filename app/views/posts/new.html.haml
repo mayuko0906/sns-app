@@ -1,58 +1,58 @@
-.wrapper
-  .main-content
-    = render 'layouts/notifications'
-    .info-header
-      .self-info
-        画像と一緒に投稿する
-    .form-image
-      = form_for @post do |f|
-        .form-post
-          = f.text_area :post , class: 'form-text' , placeholder: 'いまどうしてる？',rows:"6"
-          = f.fields_for :images do |i|
-            = i.file_field  :image_url 
-          = f.submit 'つぶやく' , class: 'form-btn'
-  .side-bar
-    .user-info
-      = link_to user_path(current_user) do
-        - if current_user.image.present?
-          .user-icon
-            = image_tag current_user.image.url
-        .user-name
-          #{current_user.name}
-        - if current_user.bio.present?
-          .user-bio
-            #{current_user.bio}
-    .user-activity
-      .tweets-num
-        = link_to  user_path(current_user) do
-          .text
-            投  稿
-          .num
-            #{current_user.posts.count} 件         
-      .follow-num
-        = link_to follows_user_path(current_user) do
-          .text
-            フォロー中
-          .num
-            #{current_user.inverse_followers.count} 人
-      .favorites
-        = link_to favorites_user_path(current_user) do
-          .text
-            お気に入り
-          .num
-            #{current_user.favorites.count} 件
-      .follower-num
-        = link_to  followers_user_path(current_user) do
-          .text
-            フォロワー
-          .num
-            #{current_user.followers.count} 人
-    .user-timeline
-      .all-posts
-        = link_to  posts_path do
-          .text
-            すべての投稿
-      .follow-posts
-        = link_to  timeline_posts_path(current_user) do
-          .text
-            フォロー中の投稿
+-# .wrapper
+-#   .main-content
+-#     = render 'layouts/notifications'
+-#     .info-header
+-#       .self-info
+-#         画像と一緒に投稿する
+-#     .form-image
+-#       = form_for @post do |f|
+-#         .form-post
+-#           = f.text_area :post , class: 'form-text' , placeholder: 'いまどうしてる？',rows:"6"
+-#           = f.fields_for :images do |i|
+-#             = i.file_field  :image_url 
+-#           = f.submit 'つぶやく' , class: 'form-btn'
+-#   .side-bar
+-#     .user-info
+-#       = link_to user_path(current_user) do
+-#         - if current_user.image.present?
+-#           .user-icon
+-#             = image_tag current_user.image.url
+-#         .user-name
+-#           #{current_user.name}
+-#         - if current_user.bio.present?
+-#           .user-bio
+-#             #{current_user.bio}
+-#     .user-activity
+-#       .tweets-num
+-#         = link_to  user_path(current_user) do
+-#           .text
+-#             投  稿
+-#           .num
+-#             #{current_user.posts.count} 件         
+-#       .follow-num
+-#         = link_to follows_user_path(current_user) do
+-#           .text
+-#             フォロー中
+-#           .num
+-#             #{current_user.inverse_followers.count} 人
+-#       .favorites
+-#         = link_to favorites_user_path(current_user) do
+-#           .text
+-#             お気に入り
+-#           .num
+-#             #{current_user.favorites.count} 件
+-#       .follower-num
+-#         = link_to  followers_user_path(current_user) do
+-#           .text
+-#             フォロワー
+-#           .num
+-#             #{current_user.followers.count} 人
+-#     .user-timeline
+-#       .all-posts
+-#         = link_to  posts_path do
+-#           .text
+-#             すべての投稿
+-#       .follow-posts
+-#         = link_to  timeline_posts_path(current_user) do
+-#           .text
+-#             フォロー中の投稿

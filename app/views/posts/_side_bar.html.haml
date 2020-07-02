@@ -20,7 +20,7 @@
         .text
           投  稿
         .num
-          #{current_user.posts.count} 件         
+          #{current_user.posts.count} 件
     .follow-num
       = link_to follows_user_path(current_user) do
         .text
@@ -53,14 +53,8 @@
   .form
     = form_for @post do |f|
       .form-post
-        = f.text_area :post , class: 'form-text' , placeholder: 'いまどうしてる？',rows:"4"
+        = f.text_area :post , class: 'form-text' , placeholder: 'いまどうしてる？',rows:"3"
         #image-box
-          -# #previews
-          -# = f.fields_for :images  do |i|
-          -#   .js-file_group{"data-index" => "#{i.index}"}
-          -#     %label
-          -#       %i.far.fa-image.image-icon.js-file
-          -#       = i.file_field  :image_url , class: 'js-file no-disply'
           .btm-wrapper
             #image-form
               = f.fields_for :images  do |i|
@@ -68,7 +62,6 @@
                   %label
                     %i.far.fa-image.image-icon.js-file
                     = i.file_field  :image_url , class: 'js-file no-disply'
+                    %span 画像を添付
             = f.submit 'つぶやく' , class: 'form-btn'
           #previews
-        -# .form-image-link
-        -#   = link_to "写真を投稿する" , new_post_path

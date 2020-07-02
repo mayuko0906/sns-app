@@ -10,7 +10,7 @@
       = @user.name
     .another-info__box__profile__bio
       = @user.bio
-      
+
     - if current_user.id != @user.id
       .another-activity
         .tweets-num
@@ -19,18 +19,21 @@
               投 稿
             .num
               #{@user.posts.count}件
+
         .favorites
           = link_to favorites_user_path(@user) do
             .text
               お気に入り
             .num
               #{@user.favorites.count}件
+
         .follow-num
           = link_to follows_user_path(@user) do
             .text
               フォロー中
             .num
               #{@user.inverse_followers.count}人
+
         .follower-num
           = link_to  followers_user_path(@user) do
             .text

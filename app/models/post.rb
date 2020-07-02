@@ -23,8 +23,6 @@ class Post < ApplicationRecord
     
   # end
 
-
-
   default_scope { order(created_at: :desc) }
 
 end

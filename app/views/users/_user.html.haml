@@ -12,9 +12,3 @@
 
   .follow-btn{:class => "follows_buttons_#{user.id}"}
     = render partial: 'layouts/follow', locals: { user: user }
-
-  -# .follow-btn
-  -#   - if user.followed_by? current_user
-  -#     = link_to 'フォロー中' ,user_follows_path(user), method: :delete 
-  -#   - else
-  -#     = link_to 'フォローする',user_follows_path(user), method: :post 

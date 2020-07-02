@@ -10,8 +10,11 @@
           .another-info__header
             #{@user.name}さんのお気に入り
           = render partial: 'user-status', locals: { user: @user } 
+
     - if @user.favorites.empty?
       お気に入りの投稿はまだありません
-    .posts
-      = render partial: 'layouts/post', collection: @user.favorite_posts
+    -else
+      .posts
+        = render partial: 'layouts/post', collection: @user.favorite_posts
+
   = render "posts/side_bar"

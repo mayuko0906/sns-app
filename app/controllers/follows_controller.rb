@@ -9,13 +9,10 @@ class FollowsController < ApplicationController
     # end
   end
 
-
   def destroy
     @user = User.find(params[:user_id])
     follow = @user.inverse_follows.find_by(follower: current_user.id)
     follow.destroy
     # redirect_back(fallback_location: root_path ,notice: "フォローを解除しました")
   end
-
-
 end
