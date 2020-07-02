@@ -10,15 +10,16 @@ class PostsController < ApplicationController
   def timeline
     @posts = Post.eager_load(user: :inverse_follows).where(follows: { follower_id: current_user.id })
     @post  = Post.new
+    @post.images.new
+
   end
 
-  def new
-    @post = Post.new
-    @post.images.new
-  end
+  # def new
+  #   @post = Post.new
+  #   @post.images.new
+  # end
 
   def create
-
     @post = Post.new(post_params)
 
     if @post.save
@@ -71,6 +72,6 @@ class PostsController < ApplicationController
 
   private
   def post_params
-    params.require(:post).permit(:post, images_attributes: [:image_url]).merge(user_id: current_user.id)
+    params.require(:post).permit(:post, images_attributes: [:image_url, :_destroy, :id]).merge(user_id: current_user.id)
   end
 end

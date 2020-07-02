@@ -5,10 +5,16 @@ class FavoritesController < ApplicationController
     @post = Post.find(params[:post_id])
     @favorite = current_user.favorites.build(post: @post)
     @favorite.save
-    # if @favorite.save
-    #   redirect_back(fallback_location: root_path ,notice: "お気に入りに登録しました")
+      # respond_to do |format|
+      #   format.js { flash[:notice] = "お気に入りに登録しました" }
+      # end
     # else
     #   redirect_to posts_url , alert: "このツイートはお気に入りに登録できません"
+    # end 
+  # if @favorite.save
+      # notice: "お気に入りに登録しました"
+  #   else
+  #     redirect_to posts_url , alert: "このツイートはお気に入りに登録できません"
   #  end
   end
 
