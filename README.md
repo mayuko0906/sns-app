@@ -18,11 +18,11 @@
 - belongs_to :user
 
 
-# Name（リポジトリ/プロジェクト/OSSなどの名前）
- 
-分かりやすくてカッコイイ名前をつける（今回は"hoge"という名前をつける）
- 
-"hoge"が何かを簡潔に紹介する
+# タイトル
+
+コミュニケーションのためのアプリです
+You can check out the app on Heroku!
+
  
 # DEMO
  
@@ -36,8 +36,9 @@
  
 "hoge"を動かすのに必要なライブラリなどを列挙する
  
-* huga 3.5.2
-* hogehuga 1.0.2
+* ruby
+* 
+
  
 # Installation
  
@@ -73,7 +74,3 @@ python demo.py
 ライセンスを明示する
  
 "hoge" is under [MIT license](https://en.wikipedia.org/wiki/MIT_License).
- 
-社内向けなら社外秘であることを明示してる
- 
-"hoge" is Confidential.
