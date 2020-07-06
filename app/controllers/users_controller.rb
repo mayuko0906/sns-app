@@ -45,6 +45,10 @@ class UsersController < ApplicationController
       format.html
       format.json
     end
+    respond_to do |format|
+      format.html
+      format.json
+    end
   end
   
   private
