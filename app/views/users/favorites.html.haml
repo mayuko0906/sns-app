@@ -12,7 +12,8 @@
           = render partial: 'user-status', locals: { user: @user } 
 
     - if @user.favorites.empty?
-      お気に入りの投稿はまだありません
+      %p 
+        お気に入りの投稿はまだありません
     -else
       .posts
         = render partial: 'layouts/post', collection: @user.favorite_posts

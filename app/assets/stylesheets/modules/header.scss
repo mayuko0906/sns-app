@@ -2,6 +2,7 @@
   background-color: #fff5ee ;
   height: 60px;
   width: 100%;
+  border-bottom: 1px solid #fa8072;
 
   &__nav{
     width: 1000px;
@@ -55,20 +56,21 @@
       text-align: right;
 
     .dropdown-btn {
-      color: yellowgreen;
+      // color: yellowgreen;
+      color: #fa8072;
       position:relative;
       display:inline-block;
       padding:10px;
       cursor:pointer;
       font-size: 20px;
       line-height: 40px;
-      &::hover {
-        background:#ffa07a;
-      }
+      // &::hover {
+      //   background:#fa8072;
+      // }
     }
     .dropdown {
       z-index:1000;
-      background:#ffa07a;
+      background:#fa8072;
       position:absolute;
       right:0;
       top:60px;

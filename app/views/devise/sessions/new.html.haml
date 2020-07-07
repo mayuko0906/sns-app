@@ -1,17 +1,24 @@
-.user-edit-wrapper
-  .edit-form
+.user-wrapper
+  .sessions-new
+
     %h1 ログイン
-    = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| 
-      .field.edit-form__email
-        = f.label :メールアドレス ,class:'email-label'
+
+    = form_for(resource, as: resource_name, url: session_path(resource_name),class:"new_user")  do |f| 
+      = render "devise/shared/error_messages", resource: resource
+      - flash.each do |name, msg|
+        = content_tag :div, msg, :id => "flash_#{name}" if msg.is_a?(String)
+
+
+      .sessions-new__email
+        = f.label :メールアドレス ,class:'label'
         = f.email_field :email, autofocus: true, autocomplete: "email" ,class:'email-form'
-      .field.edit-form__password
-        = f.label :password,class: 'password-label'
+      .sessions-new__password
+        = f.label :password,class: 'label'
         = f.password_field :password, autocomplete: "current-password",class: 'password-form'
-      - if devise_mapping.rememberable?
-        .field.check-box
-          = f.check_box :remember_me,class:'check-box'
-          = f.label :remember_me,class:'check-box-text'
+      -# - if devise_mapping.rememberable?
+      -#   .field.check-box
+      -#     = f.check_box :remember_me,class:'check-box'
+      -#     = f.label :remember_me,class:'check-box-text'
       .actions
-        = f.submit "ログイン" ,class:'submit-btn'
-    = render "devise/shared/links"
+        = f.submit "ログインする" ,class:'submit-btn'
+    -# = render "devise/shared/links"

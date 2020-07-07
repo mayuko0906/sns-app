@@ -2,24 +2,25 @@
   box-sizing: border-box;
   font-family: 'M PLUS Rounded 1c', sans-serif;
 }
-
 .wrapper{
   height: calc(100vh - 60px);
   width: 1000px;
   margin: 0 auto;
   display: flex;
 }
-
 .main-content{
   background-color: #faebd7;
   height: 100%;
   width: 70%;
   overflow: scroll;
-
+  p{
+    padding: 10px;
+    color: #8b4513;
+  }
   .info-header{
-    background-color: #ffdab9;
+    background-color: #faebd7;
     .self-info{
-      background-color:#bdb76b;
+      background-color:#fa8072;
       height: 40px;
       line-height: 40px;
       padding-left: 10px;
@@ -27,7 +28,7 @@
     }
     .another-info{
       &__header{
-        background-color: #bdb76b;
+        background-color: #fa8072;
         color: white;
         height: 40px;
         line-height: 40px;
@@ -62,26 +63,28 @@
           width: 100%;
           position: relative;
           &__name{
-            font-size: 20px;
+            font-size: 25px;
             font-weight: bold;
             margin-left: 15px;
+            color: #8b4513;
           }
           &__bio{
-            font-size: 15px;
+            font-size: 14px;
             margin-left: 25px;
+            color: #8b4513;;
           }
           .another-activity{
             position: absolute;
             bottom: 10px;
             display: flex;
             width: 100%;
-            font-size: 14px;
+            font-size: 15px;
             justify-content: space-around;
             > div{
-              background-color: lightsalmon;
+              // background-color: lightsalmon;
               width: 20%;
               height: 50px;
-              border-radius: 10px;
+              // border-radius: 10px;
               >a{
                 text-decoration: none;
                 font-weight: bold;
@@ -112,7 +115,6 @@
       display: flex;
       .user-icon{
         width: 100px;
-
         img{
           border-radius: 50%;
           width: 70px;
@@ -136,11 +138,14 @@
       }
       .user-name{
         font-weight: bold;
+        a{
+          color: #8b4513;
+        }
       }
       .post-content{
         padding: 0 10px;
         font-size: 18px;
-
+        color: #8b4513;
         &__image{
           a{
             img{
@@ -169,6 +174,9 @@
         }
         .destoroy-follow-wrapper{
           font-size: 14px;
+          a{
+            color: #8b4513;
+          }
         }
       }
     }
@@ -183,7 +191,6 @@
       }
     }
   }
-
   .form-image{
     width: 500px;
     margin: 30px auto;
@@ -197,15 +204,12 @@
 
 .users{
   padding: 10px 15px 0 15px;
-
   .user{
-    background-color: lightgreen;
     padding: 10px;
     margin-bottom: 10px;
     background-color: #fffff0;
     display: flex;
     position: relative;
-
     .user-icon{
       width: 100px;
       img{
@@ -243,200 +247,4 @@
       color: black;
     }
   }
-}
-
-
-.side-bar{
-  background-color: #ffdab9;
-  height: 100%;
-  width: 30%;
-
-  .user-info{
-    width: 95%;
-    margin: 20px auto;
-
-    .user-icon{
-      img{
-      border-radius: 50%;
-      width: 120px;
-      height: 120px;
-      margin: 10px;
-      border: 1px solid #8b4513;
-      }
-    }
-
-    .no-image{
-      width: 110px;
-      height: 110px;
-      background-color: floralwhite;
-      border-radius: 50%;
-      text-align: center;
-      line-height: 110px;
-      font-size: 20px;
-      color: darkgray;
-      border: 1px solid #8b4513;
-    }
-
-      a{
-        color: #b8860b;
-        text-decoration: none;
-        font-weight: bold;
-      }
-    .user-name{
-      font-size: 30px;
-      margin-left: 10px;
-    }
-    .user-bio{
-      margin: 0 20px;
-      font-size: 15px;
-    }
-    
-  }
-
-  .user-activity{
-    width: 100%;
-    margin: 20px auto;
-    font-size: 14px;
-    display: flex;
-    flex-wrap: wrap;
-    > div{
-      background-color: lightsalmon;
-      width: 40%;
-      height: 50px;
-      margin: 5px auto;
-      border-radius: 10px;
-      >a{
-        text-decoration: none;
-        font-weight: bold;
-        text-align: center;
-        line-height: 24px;
-        color: #8b4513;
-      }
-    }
-  }
-  .user-timeline{
-    width: 95%;
-    padding-left: 10px;
-    margin: 0 auto;
-    font-size: 20px;
-    font-weight: bold;
-    .all-posts{
-      margin-bottom: 10px;
-    }
-    a{
-      text-decoration: none;
-      color: #b8860b;
-    }
-  }
-
-  .form{
-
-    .form-post{
-      display: flex;
-      justify-content: center;
-      flex-direction: column;
-
-      .form-text{
-        width: 90%;
-        margin: 15px auto;
-        padding: 10px;
-        height: calc( 1.8em * 3 );
-        line-height: 1.8;
-        resize: none;
-      }
-
-      #image-box{
-        margin: 0 15px;
-        height: 120px;
-
-        #previews{
-          display: flex;
-          justify-content: center;
-        }
-
-        .js-file_preview{
-          position: relative;
-          padding: 2px;
-
-          .js-remove{
-            display: block;
-            cursor: pointer;
-            background-color: rgba(105,105,105,0.8);
-            color: white;
-            position: absolute;
-            top: 5px;
-            left: 5px;
-            width: 20px;
-            text-align: center;
-            font-size: 15px;
-            border-radius: 10px;
-          }
-
-          .js-file_group{
-            cursor: pointer;
-            color: white;
-            p{
-              color: #8b4513;
-              text-align: center;
-              font-size: 15px;
-            }
-          }
-        }
-        .js-file_group{
-          label{
-            color: #8b4513;
-            background-color: lightsalmon;
-            padding: 5px 10px;
-            display: block;
-            border-radius: 10px;
-            font-size: 15px;
-            cursor: pointer;
-            .no-disply{
-              display: none;
-            }
-          }
-        }
-        .btm-wrapper{
-          display: flex;
-          justify-content: space-between;
-          margin-bottom: 5px;
-
-          .form-btn{
-            background-color: lightsalmon;
-            color: #8b4513;
-            border: none;
-            padding: 5px 10px;
-            border-radius: 10px;
-            font-size: 15px;
-            cursor: pointer;
-          }
-        }
-      }
-    }
-  }
-}
-
-// #popup-background{
-//   position:fixed;     /* 位置の固定 */
-//   top: 0;             /* 表示位置 */
-//   left: 0;            /* 表示位置 */
-//   height: 100%;       /* 画面全体に表示 */
-//   width: 100%;        /* 画面全体に表示 */
-//   background:red;    /* 背景色 */
-//   opacity: 0.60;      /* 透明度 */
-//   margin: 0;          /* 余白の削除 */
-//   padding: 0;         /* 余白の削除 */
-//   z-index:1000;       /* 要素のz座標 */
-// }
-// #popup-item{
-//   position:fixed;     /* 位置の固定 */
-//   top: 50%;           /* 表示位置(真ん中に表示) */
-//   left: 50%;          /* 表示位置(真ん中に表示) */
-//   margin: 0;          /* 余白の削除 */
-//   padding: 0;         /* 余白の削除 */
-//   z-index:1001;       /* 要素のz座標 */
-// }
-
-.no-disply{
-  display: none;
 }

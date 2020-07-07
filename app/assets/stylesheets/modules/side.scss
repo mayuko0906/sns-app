@@ -1,0 +1,194 @@
+.side-bar{
+  background-color: #ffefd5;
+  height: 100%;
+  width: 30%;
+
+  .user-info{
+    height: 37%;
+    padding: 20px 20px 0 20px;
+
+    .user-icon{
+      img{
+      border-radius: 50%;
+      width: 120px;
+      height: 120px;
+      // margin: 10px;
+      border: 1px solid #8b4513;
+      }
+    }
+
+    .no-image{
+      width: 110px;
+      height: 110px;
+      background-color: floralwhite;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 110px;
+      font-size: 20px;
+      color: darkgray;
+      border: 1px solid #8b4513;
+    }
+
+    a{
+      color: #8b4513;
+      text-decoration: none;
+    }
+    .user-name{
+      font-size: 25px;
+      margin-top: 10px;
+      font-weight: bold;
+
+    }
+    .user-bio{
+      font-size: 14px;
+    }
+  }
+
+  .user-activity{
+    width: 100%;
+    font-size: 17px;
+
+    height: 23%;
+    > div{
+      width: 50%;
+      height: 16%;
+      margin-left: 20px;
+      >a{
+        text-decoration: none;
+        text-align: center;
+        line-height: 24px;
+        color: #8b4513;
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+  }
+
+  .form{
+    height: 40%;
+
+    .form-post{
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+
+      .form-text{
+        width: 90%;
+        margin: 15px auto;
+        padding: 10px;
+        height: calc( 1.8em * 3 );
+        line-height: 1.8;
+        resize: none;
+      }
+
+      #image-box{
+        margin: 0 15px;
+
+        #previews{
+          display: flex;
+          justify-content: center;
+        }
+
+        .js-file_preview{
+          position: relative;
+          padding: 2px;
+
+          .js-remove{
+            display: block;
+            cursor: pointer;
+            background-color: rgba(105,105,105,0.8);
+            color: white;
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            width: 20px;
+            text-align: center;
+            font-size: 15px;
+            border-radius: 10px;
+          }
+
+          .js-file_group{
+            cursor: pointer;
+            color: white;
+            p{
+              color: #white;
+              text-align: center;
+              font-size: 15px;
+            }
+          }
+        }
+        .js-file_group{
+          label{
+            color: white;
+            background-color: #fa8072;
+            padding: 5px 10px;
+            display: block;
+            font-size: 15px;
+            cursor: pointer;
+            .no-disply{
+              display: none;
+            }
+          }
+        }
+        .btm-wrapper{
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 5px;
+
+          #image-form{
+            width: 47%;
+
+            .js-file_group{
+              label{
+                color: white;
+                background-color: #fa8072;
+                padding: 5px 10px;
+                display: block;
+                font-size: 15px;
+                cursor: pointer;
+                .no-disply{
+                  display: none;
+                }
+              }
+            }
+          }
+
+          .form-btn{
+            width: 47%;
+            background-color: #fa8072;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            font-size: 15px;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}
+
+// #popup-background{
+//   position:fixed;     /* 位置の固定 */
+//   top: 0;             /* 表示位置 */
+//   left: 0;            /* 表示位置 */
+//   height: 100%;       /* 画面全体に表示 */
+//   width: 100%;        /* 画面全体に表示 */
+//   background:red;    /* 背景色 */
+//   opacity: 0.60;      /* 透明度 */
+//   margin: 0;          /* 余白の削除 */
+//   padding: 0;         /* 余白の削除 */
+//   z-index:1000;       /* 要素のz座標 */
+// }
+// #popup-item{
+//   position:fixed;     /* 位置の固定 */
+//   top: 50%;           /* 表示位置(真ん中に表示) */
+//   left: 50%;          /* 表示位置(真ん中に表示) */
+//   margin: 0;          /* 余白の削除 */
+//   padding: 0;         /* 余白の削除 */
+//   z-index:1001;       /* 要素のz座標 */
+// }
+
+.no-disply{
+  display: none;
+}

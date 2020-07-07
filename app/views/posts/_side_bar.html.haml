@@ -21,18 +21,19 @@
           投  稿
         .num
           #{current_user.posts.count} 件
-    .follow-num
-      = link_to follows_user_path(current_user) do
-        .text
-          フォロー中
-        .num
-          #{current_user.inverse_followers.count} 人
     .favorites
       = link_to favorites_user_path(current_user) do
         .text
           お気に入り
         .num
           #{current_user.favorites.count} 件
+    .follow-num
+      = link_to follows_user_path(current_user) do
+        .text
+          フォロー中
+        .num
+          #{current_user.inverse_followers.count} 人
+
     .follower-num
       = link_to  followers_user_path(current_user) do
         .text
@@ -40,11 +41,11 @@
         .num
           #{current_user.followers.count} 人
 
-  .user-timeline
     .all-posts
       = link_to  posts_path do
         .text
           すべての投稿
+
     .follow-posts
       = link_to  timeline_posts_path(current_user) do
         .text
@@ -60,8 +61,8 @@
               = f.fields_for :images  do |i|
                 .js-file_group{"data-index" => "#{i.index}"}
                   %label
-                    %i.far.fa-image.image-icon.js-file
                     = i.file_field  :image_url , class: 'js-file no-disply'
                     %span 画像を添付
+                    %i.far.fa-image.image-icon.js-file
             = f.submit 'つぶやく' , class: 'form-btn'
           #previews
