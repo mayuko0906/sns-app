@@ -18,30 +18,34 @@
     -# %script{ src: "https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/js/drawer.min.js"}
   %body
   
-    -# %header
-      -# #wrapper
-      -#   .nav-toggle
-      -#     = icon 'fas', 'bars' ,class:'nav-toggle__icon'
-      -#   .gloval-nav
-      -#     %nav
-      -#       %ul
-      -#         - if user_signed_in?
-      -#           %li
-      -#             %a{href:"#"}
-      -#               マイページ
-      -#             %li
-      -#               =link_to "設定",edit_user_path(current_user)
-                    
-      -#             %li
-      -#           = link_to 'ログアウト', destroy_user_session_path, method: :delete 
-      -#         - else
-      -#           %li
-      -#             = link_to '登録する', new_user_registration_path
-      -#           %li
-                  -# = link_to 'ログイン', new_user_session_path
+    %header
+      #wrapper
+        .nav-toggle
+          = icon 'fas', 'bars' ,class:'nav-toggle__icon'
+        = link_to  posts_path  , class: "title"  do
+          %sapn{style:"font-family: 'Kaushan Script', cursive"}
+            MuNi
+        =link_to new_post_path  , class: "new-post"do
+          %i.fa.fa-feather
+        .gloval-nav
+          %nav
+            %ul
+              - if user_signed_in?
+                %li
+                  =link_to "マイページ", user_path(current_user)
+                %li
+                  =link_to "設定",edit_user_path(current_user)
+                %li
+                  = link_to 'ログアウト', destroy_user_session_path, method: :delete 
+              - else
+                %li
+                  = link_to '登録する', new_user_registration_path
+                %li
+                  = link_to 'ログイン', new_user_session_path
           
     .header
       = render "layouts/header"
+
     = yield
 
 

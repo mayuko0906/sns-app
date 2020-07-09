@@ -5,6 +5,9 @@ class PostsController < ApplicationController
     @posts = Post.includes(:user, :images).order("created_at DESC")
   end
 
+  def new
+  end
+
   def timeline
     @posts = Post.eager_load(user: :inverse_follows).where(follows: { follower_id: current_user.id })
   end
