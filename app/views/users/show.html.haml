@@ -5,7 +5,7 @@
       - if current_user.id == @user.id
         .self-info
           あなたの投稿
-        #self-activity
+        .self-activity#self-activity
           = render partial: 'user-status', locals: { user: @user } 
       -else
         .another-info
