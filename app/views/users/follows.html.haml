@@ -6,12 +6,12 @@
         .self-info
           あなたがフォローしている人
         .self-activity#self-activity
-          = render partial: 'user-status', locals: { user: @user } 
+          = render partial: 'user-status', locals: { user: @user }
       -else
         .another-info
           .another-info__header
             #{@user.name}さんがフォローしている人
-          = render partial: 'user-status', locals: { user: @user } 
+          = render partial: 'user-status', locals: { user: @user }
 
     - if @user.inverse_followers.empty?
       %p

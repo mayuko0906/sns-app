@@ -15,12 +15,12 @@ class Post < ApplicationRecord
   #   return Post.all unless search
 
   #   split_keyword = search.split(/[[:blank:]]+/)
-    
+
   #   split_keyword.each do |search|
-  #     next if search == "" 
+  #     next if search == ""
   #     Post.where('post LIKE(?)', "%#{search}%")
-  #   end 
-    
+  #   end
+
   # end
 
   default_scope { order(created_at: :desc) }

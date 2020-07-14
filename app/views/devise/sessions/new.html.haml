@@ -3,7 +3,7 @@
 
     %h1 ログイン
 
-    = form_for(resource, as: resource_name, url: session_path(resource_name),class:"new_user")  do |f| 
+    = form_for(resource, as: resource_name, url: session_path(resource_name),class:"new_user")  do |f|
       = render "devise/shared/error_messages", resource: resource
       - flash.each do |name, msg|
         = content_tag :div, msg, :id => "flash_#{name}" if msg.is_a?(String)

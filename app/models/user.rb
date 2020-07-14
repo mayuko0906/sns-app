@@ -11,9 +11,9 @@ class User < ApplicationRecord
   has_many :favorite_posts, through: :favorites, source: :post
 
   has_many :follows, foreign_key: :follower_id
-  has_many :inverse_followers, through: :follows 
+  has_many :inverse_followers, through: :follows
   has_many :inverse_follows, foreign_key: :inverse_follower_id, class_name: "Follow"
-  has_many :followers, through: :inverse_follows 
+  has_many :followers, through: :inverse_follows
 
 
   def favorited_by? user

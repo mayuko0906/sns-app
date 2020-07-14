@@ -1,6 +1,6 @@
 class FavoritesController < ApplicationController
   # before_filter :require_login
- 
+
   def create
     @post = Post.find(params[:post_id])
     @favorite = current_user.favorites.build(post: @post)
@@ -10,7 +10,7 @@ class FavoritesController < ApplicationController
       # end
     # else
     #   redirect_to posts_url , alert: "このツイートはお気に入りに登録できません"
-    # end 
+    # end
   # if @favorite.save
       # notice: "お気に入りに登録しました"
   #   else

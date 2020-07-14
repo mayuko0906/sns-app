@@ -10,7 +10,7 @@ class UsersController < ApplicationController
   def edit
     @user = current_user
   end
-  
+
   def update
     if current_user.update(user_params)
       redirect_to root_path
@@ -34,13 +34,13 @@ class UsersController < ApplicationController
   def search
     redirect_to root_path if params[:keyword] == ""
     split_keyword = params[:keyword].split(/[[:blank:]]+/)
-    @users = [] 
+    @users = []
     split_keyword.each do |keyword|
-      next if keyword == "" 
+      next if keyword == ""
       @users +=User.where('name LIKE(?)', "%#{keyword}%")
-    end 
-    @users.uniq! 
-    #重複した商品を削除する
+    end
+    @users.uniq!
+    #重複したユーザーを削除する
     respond_to do |format|
       format.html
       format.json
@@ -50,7 +50,7 @@ class UsersController < ApplicationController
       format.json
     end
   end
-  
+
   private
   def user_params
     params.require(:user).permit(:name, :email, :bio, :image)

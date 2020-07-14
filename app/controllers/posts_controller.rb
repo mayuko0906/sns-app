@@ -31,12 +31,12 @@ class PostsController < ApplicationController
   def search
     redirect_to root_path if params[:keyword] == ""
     split_keyword = params[:keyword].split(/[[:blank:]]+/)
-    @posts = [] 
+    @posts = []
     split_keyword.each do |keyword|
-      next if keyword == "" 
+      next if keyword == ""
       @posts += Post.where('post LIKE(?)', "%#{keyword}%")
-    end 
-    @posts.uniq! 
+    end
+    @posts.uniq!
     #重複した投稿を削除する
     respond_to do |format|
       format.html
