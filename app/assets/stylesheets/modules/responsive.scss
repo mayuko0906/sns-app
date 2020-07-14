@@ -14,8 +14,44 @@
   .user-wrapper{
     width: 100%;
     height: auto;
-
+    padding-bottom: 30px;
+    .edit-form{
+      .edit_user{
+        >div{
+          >input{
+            width: 100%;
+          }
+        }
+         .edit-form__image{
+          .image_input_btn{
+            width: 100%;
+          }
+        }
+      }
+      .pass{
+        a{
+          width: 100%;
+          font-size: 12px;
+        }
+      }
+    }
+    .edit-form__pass{
+      .edit_user{
+        >div{
+          >input{
+            width: 100%;
+          }
+        }
+      }
+    }
+    .back-btn{
+      width: 100%;
+    }
+    .delete-box{
+      width: 100%;
+    }
   }
+
 
 
   .wrapper{

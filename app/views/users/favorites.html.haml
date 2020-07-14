@@ -5,6 +5,8 @@
       - if current_user.id == @user.id
         .self-info
           あなたのお気に入り
+        .self-activity#self-activity
+          = render partial: 'user-status', locals: { user: @user } 
       - else
         .another-info
           .another-info__header
