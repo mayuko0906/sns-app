@@ -31,7 +31,7 @@ https://lit-scrubland-91977.herokuapp.com
 https://lit-scrubland-91977.herokuapp.com
 
 * テストアカウント
-<br>
+
 mail: muni@muni.com
 <br>
 pass: nekoneko
