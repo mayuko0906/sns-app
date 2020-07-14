@@ -7,7 +7,7 @@ Rails.application.routes.draw do
     get :follows, on: :member
     get :followers, on: :member
     get :search, on: :collection
-  end  
+  end
   resources :posts do
     get :search, on: :collection
     resource :favorites, only: [:create, :destroy]

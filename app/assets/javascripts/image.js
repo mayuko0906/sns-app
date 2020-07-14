@@ -1,5 +1,5 @@
 $(function (){
-  // 画像用のinputを生成する関数
+  // 2枚目以降の画像inputを生成する関数
   const buildFileField = (num)=> {
     const html = `<div data-index="${num}" class="js-file_group">
                     <label>
@@ -49,7 +49,7 @@ $(function (){
 
     // イベントが発火した要素のデータindexの番号を取得
     const targetIndex = $(this).parent().parent().data('index');
-    
+
     // ファイルのブラウザ上でのURLを取得する
     const file = e.target.files[0];
     const blobUrl = window.URL.createObjectURL(file);
@@ -57,7 +57,7 @@ $(function (){
     // 該当indexを持つimgがあれば取得して変数imgに入れる(画像変更の処理)
     if (img = $(`img[data-index="${targetIndex}"]`)[0]) {
       img.setAttribute('src', blobUrl);
-    } else {  
+    } else {
       // 新規画像追加の処理
       $('#previews').append(buildImg(targetIndex, blobUrl));
       // fileIndexの先頭の数字を使ってinputを作る
@@ -69,7 +69,7 @@ $(function (){
 
       // プレビュー が4枚になるとinputを表示させない
       const count = $(".js-file_preview").length;
-      if (count == 4) { 
+      if (count == 4) {
         $('#image-form > .js-file_group:last').hide();
       }
 
@@ -93,7 +93,7 @@ $(function (){
 
     // 非表示になっていた、押された削除ボタンのデータindexのinputを削除
     $(`.js-file_group[data-index="${targetIndex}"]`).remove();
-    
+
     // 今表示されていた次の画像用のinputを消す
     $("#image-form > .js-file_group:last").remove();
 
