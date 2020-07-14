@@ -7,8 +7,7 @@ You can check out the app on Heroku!
 https://lit-scrubland-91977.herokuapp.com
  
 # DEMO
-("Muni"の魅力が直感的に伝えわるデモ動画や図解を載せる)
- 
+https://github.com/mayuko0906/sns-app/issues/3#issue-656284053
 
 # Requirement
  
