@@ -9,19 +9,21 @@ https://lit-scrubland-91977.herokuapp.com
  
 # 概要
 
-* テキストと画像（最大4枚）が投稿できます
-* 他のユーザーをフォローしたり、他のユーザーからフォローされることができます
-* 投稿のお気に入り登録ができます
-
 ![画面収録 2020-07-14 11 33 16 mov](https://user-images.githubusercontent.com/64821510/87378434-bf30d100-c5c8-11ea-862e-272776105201.gif)
 
+* テキストと画像（最大4枚）の投稿
+* フォロー/フォロワー機能
+* 投稿のお気に入り登録機能
+* 投稿/ユーザーの検索機能
+
 # 本番環境
+
 https://lit-scrubland-91977.herokuapp.com
 
 * テストアカウント
 
 mail: muni@muni.com
-<br>
+
 pass: nekoneko
 
 # 制作背景・意図
