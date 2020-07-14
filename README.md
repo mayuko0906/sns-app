@@ -42,7 +42,7 @@ Ruby on Railsの理解を深める目的で、既存のSNS等を参考に作成�
 # DEMO
 
 投稿一覧
-<img width="1435" alt="muni投稿一覧" src="https://user-images.githubusercontent.com/64821510/87382202-5732b880-c5d1-11ea-9adc-4e7b025b3915.png"width="320px">
+<img width="1435" alt="muni投稿一覧" src="https://user-images.githubusercontent.com/64821510/87382202-5732b880-c5d1-11ea-9adc-4e7b025b3915.png width="320px">
 
 ログイン
 <img width="1438" alt="muniログイン画面" src="https://user-images.githubusercontent.com/64821510/87381483-ceffe380-c5cf-11ea-8354-eecf56912ef7.png">
