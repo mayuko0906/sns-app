@@ -13,7 +13,7 @@
 
   .user-wrapper{
     width: 100%;
-    height: auto;
+    // height: auto;
     padding-bottom: 30px;
     .edit-form{
       .edit_user{
@@ -49,6 +49,17 @@
     }
     .delete-box{
       width: 100%;
+    }
+    .registration-new{
+      min-height: calc(100vh - 7vh);
+      .new_user{
+        em{
+          font-size: 15px;
+        }
+      }
+    }
+    .sessions-new {
+      min-height: calc(100vh - 7vh);
     }
   }
 
@@ -118,7 +129,7 @@
   
   .gloval-nav {
     background: #fa8072;
-    width: 60%;
+    width: 40%;
     margin-top: 7vh;
     color: #fff;
     position: fixed;
