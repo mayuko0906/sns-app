@@ -18,7 +18,7 @@
           -if post.images.present?
             - post.images.each do |image|
               = link_to image.image_url.url ,'data-lightbox':image ,:rel => "lightbox" do
-                = image_tag image.image_url.url ,class:'popup-image'
+                = image_tag image.image_url.url , class:'popup-image'
       .post-time
         = post.created_at.to_s(:datetime)
 
