@@ -91,18 +91,11 @@ Ruby on Railsの理解を深める目的で、既存のSNS等を参考に作成�
 * Scss
 * VSC
 * mySQL
-* 
-* 
-* 
-* 
 
 # 課題/今後実装したい機能
 
 * ユーザー検索のajax通信
 * コメント機能（返信）
-* 
-* 
-
 
 # DB設計
 
@@ -112,19 +105,48 @@ Ruby on Railsの理解を深める目的で、既存のSNS等を参考に作成�
 |name|string|null: false, index: true|
 
 ### Association
-- has_many :tweets
+- has_many :posts
 
 ## postsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|text|text|null: false, index: true|
+|post|text|null: false, index: true|
 |user_id|reference|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :user
 
+## imagesテーブル
+|Column|Type|Options|
+|------|----|-------|
+|image_url|string|null: false|
+|post_id|reference|null: false, foreign_key: true|
+
+### Association
+- belongs_to :post
+
+## favoritesテーブル
+|Column|Type|Options|
+|------|----|-------|
+|post_id|reference|null: false, foreign_key: true|
+|user_id|reference|null: false, foreign_key: true|
+
+### Association
+- belongs_to :user
+- belongs_to :post
+
+## followsテーブル
+|Column|Type|Options|
+|------|----|-------|
+|follower_id|reference|null: false, foreign_key: true|
+|inverse_follower_id|reference|null: false, foreign_key: true|
+
+### Association
+- belongs_to :follower, class_name: "User"
+- belongs_to :inverse_follower, class_name: "User"
+
 
 # 製作者
- 
+
 mayuko0906
 
