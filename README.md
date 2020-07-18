@@ -103,6 +103,9 @@ Ruby on Railsの理解を深める目的で、既存のSNS等を参考に作成�
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false, index: true|
+|bio|text||
+|image|string||
+
 
 ### Association
 - has_many :posts
